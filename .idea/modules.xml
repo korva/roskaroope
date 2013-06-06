@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RoskaRoope.iml" filepath="$PROJECT_DIR$/RoskaRoope.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RoskaRoope/RoskaRoope-RoskaRoope.iml" filepath="$PROJECT_DIR$/RoskaRoope/RoskaRoope-RoskaRoope.iml" />
+    </modules>
+  </component>
+</project>
+

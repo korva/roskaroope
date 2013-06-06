@@ -1,0 +1,15 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1370551538000 819 6bccabfbcb6ba73e72ee39cf49d80d3adc31c36e /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/MainActivity.class
+1370551515000 484258 bd6479f5dd592790607e0504e66e0f31c2b4d308 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/libs/android-support-v4.jar
+1370551538000 406 e3adee2a42f940c7bd90f01bf3c113a63c957381 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$layout.class
+1370551538000 475 600a7e67bc0ed28dfc05838fa2c9faefdea3c645 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$string.class
+1370551538000 434 ce60de187d82209e8042c562cb1ccb633d2daa3e /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$style.class
+1370551538000 687 b8fe4020f00012463e6764c76a9e4da7619caef0 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R.class
+1370551538000 410 d2839005a26e26baaec5f249a77cae08ba1bbe0b /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$drawable.class
+1370551538000 396 7fe8da89197bfbf8f164b431e177a9fc201e24f6 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$id.class
+1370551538000 347 3f17b55989fcd855d909fc52bea1070c20ba9e24 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/BuildConfig.class
+1370551538000 391 10da3f65984d8da10ae2bbab738f3f3dae205291 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$menu.class
+1370551538000 464 99c9df1636d4bfcbe6767e0b58e579108f5d9397 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$dimen.class
+1370551538000 343 a55e8535e32e325d658e0f70e31806fba6a56def /home/jaakko/androidapps/RoskaRoope/RoskaRoope/build/classes/debug/com/lato/roskaroope/R$attr.class
