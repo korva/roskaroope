@@ -49,13 +49,58 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="button_capture_pressed"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-xhdpi/button_capture_pressed.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-xhdpi/content_new.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="button_capture"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-xhdpi/button_capture.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="button_capture_pressed"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-hdpi/button_capture_pressed.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-hdpi/content_new.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="button_capture"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-hdpi/button_capture.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-mdpi/ic_launcher.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="button_capture_pressed"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-mdpi/button_capture_pressed.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="content_new"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-mdpi/content_new.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="button_capture"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-mdpi/button_capture.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
@@ -84,8 +129,33 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="right_slide_out"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/anim/right_slide_out.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="right_slide_in"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/anim/right_slide_in.xml"
+                qualifiers=""
+                type="anim" />
+            <file
+                name="activity_map"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/layout/activity_map.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_camera"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/layout/activity_camera.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_main"
                 path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/layout/activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_score"
+                path="/home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/layout/activity_score.xml"
                 qualifiers=""
                 type="layout" />
             <file

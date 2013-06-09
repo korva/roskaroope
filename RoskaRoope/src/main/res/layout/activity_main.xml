@@ -14,9 +14,9 @@
             android:layout_height="wrap_content"
             android:text="Pelaa!"
             android:id="@+id/button"
+            android:onClick="onPlayButtonClicked"
             android:width="200dp"
-            android:textColorLink="Matrix matrix = new Matrix(); 			matrix.postRotate(90); 			Bitmap rotatedBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight(), matrix, true);"
-            android:layout_above="@+id/button2"
+           android:layout_above="@+id/button2"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="28dp"/>
 
@@ -26,7 +26,6 @@
             android:text="Näytä lähin roskis"
             android:id="@+id/button2"
             android:width="200dp"
-            android:textColorLink="Matrix matrix = new Matrix(); 			matrix.postRotate(90); 			Bitmap rotatedBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight(), matrix, true);"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/button"/>
 
