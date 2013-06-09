@@ -6,7 +6,7 @@ import android.os.Bundle;
 /**
  * Created by jaakko on 6/6/13.
  */
-public class MapActivity extends Activity {
+public class TrashMapActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

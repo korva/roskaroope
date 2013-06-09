@@ -144,7 +144,7 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
 
             if(image != null) {
                 sharedCameraImage = image;
-                Intent intent = new Intent(CameraActivity.this, MapActivity.class);
+                Intent intent = new Intent(CameraActivity.this, TrashMapActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 
