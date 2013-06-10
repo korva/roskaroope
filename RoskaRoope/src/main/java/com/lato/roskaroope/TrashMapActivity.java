@@ -13,6 +13,7 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.util.Log;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.lato.roskaroope.TrashMapFragment.OnTargetReachedListener;
@@ -21,6 +22,8 @@ import com.lato.roskaroope.TrashMapFragment.OnTargetReachedListener;
  * Created by jaakko on 6/6/13.
  */
 public class TrashMapActivity extends Activity implements OnTargetReachedListener {
+
+    private static final String TAG = "TrashMapActivity";
 
     com.lato.roskaroope.LocationService mLocationService = null;
     LocationServiceListener mLocationServiceListener = null;
@@ -38,10 +41,12 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_main);
+
         // Create a listener for LocationService events
         mLocationServiceListener = new LocationServiceListener() {
             public void onLocationAvailable(Location location) {
-                //Log.d(TAG, "Listener callback lat: " + location.getLatitude() + " lon: " + location.getLongitude() + " acc: " + location.getAccuracy());
+                Log.d(TAG, "Listener callback lat: " + location.getLatitude() + " lon: " + location.getLongitude() + " acc: " + location.getAccuracy());
                 // only accept location if it is accurate enough
                 if (location.getAccuracy() > mLocationAccuracyTreshold) return;
 
@@ -55,7 +60,7 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
         // Bind to location service
         bindService(new Intent(this, LocationService.class), mConnection, Context.BIND_AUTO_CREATE);
 
-
+        showMapFragment();
     }
 
     private void showMapFragment() {
@@ -79,8 +84,17 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
         ft.commit();
     }
 
+    protected void onDestroy() {
+        super.onDestroy();
+        stopService(new Intent(this, LocationService.class));
+        if (mConnection != null) unbindService(mConnection);
+
+    }
+
     private ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
+
+            Log.d(TAG, "Location service connected");
 
             mLocationService = ((LocationService.LocalBinder)service).getService();
 
@@ -120,7 +134,7 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
             // Because it is running in our same process, we should never
             // see this happen.
             mLocationService = null;
-
+            Log.d(TAG, "Location service disconnected");
         }
     };
 

@@ -86,7 +86,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         List<Camera.Size> pictureSizes = parameters.getSupportedPictureSizes();
         for(Camera.Size size : pictureSizes) {
             Log.d(TAG, "Size: " + size.height + " x " + size.width);
-            if(size.height == 1200 && size.width == 1600) {
+            if(size.height == 640 && size.width == 480) {
                 parameters.setPictureSize(size.width, size.height);
                 Log.d(TAG, "Selected this ^^");
             }

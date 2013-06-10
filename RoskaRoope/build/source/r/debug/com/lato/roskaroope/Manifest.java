@@ -9,6 +9,6 @@ package com.lato.roskaroope;
 
 public final class Manifest {
     public static final class permission {
-        public static final String MAPS_RECEIVE="com.lato.leikkimaan.permission.MAPS_RECEIVE";
+        public static final String MAPS_RECEIVE="com.lato.roskaroope.permission.MAPS_RECEIVE";
     }
 }

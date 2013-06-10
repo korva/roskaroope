@@ -68,6 +68,7 @@ public class TrashMapFragment extends MapFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "mapFragment onCreateView");
         View root = super.onCreateView(inflater, container, savedInstanceState);
         mMap = getMap();
         mMap.setMyLocationEnabled(true);
@@ -107,6 +108,9 @@ public class TrashMapFragment extends MapFragment {
     }
 
     public void updateCurrentLocation(Location location) {
+
+        Log.d(TAG, "TrashMapFragment updateCurrentLocation");
+
         // check location to selected spot
         // if under treshold, fire event to trigger score activity
         if (mTarget == null) {
@@ -114,7 +118,10 @@ public class TrashMapFragment extends MapFragment {
             double nearest = Double.MAX_VALUE;
             for(TrashCan can : mSpotList) {
                 double dist = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), can.location.latitude, can.location.longitude);
-                if(dist < nearest) mTarget = can;
+                if(dist < nearest) {
+                    mTarget = can;
+                    nearest = dist;
+                }
             }
 
             Log.d(TAG, "Nearest trash can was " + mTarget.name + ", " + nearest*1000 + " m away.");
@@ -135,12 +142,13 @@ public class TrashMapFragment extends MapFragment {
     }
 
     private void fetchSpots(LatLng center, int limit) {
-        if(center == null || limit == 0) return;
+        //if(center == null || limit == 0) return;
 
         mSpotList.clear();
-        mSpotList.add(new TrashCan(21.45678, 71.2353634, "Roskis1"));
-        mSpotList.add(new TrashCan(21.45678, 71.3353634, "Roskis2"));
-        mSpotList.add(new TrashCan(21.45678, 71.4353634, "Roskis3"));
+        mSpotList.add(new TrashCan(61.4508369, 23.9542286, "Roskis1"));
+        mSpotList.add(new TrashCan(61.5508369,23.8542286, "Roskis2"));
+        mSpotList.add(new TrashCan(61.4808369, 23.8842286, "Roskis3"));
+        mSpotList.add(new TrashCan(61.4508369, 23.8542286, "Roskis4"));
 
         /*ParseGeoPoint userLocation = new ParseGeoPoint(center.latitude, center.longitude);
         ParseQuery query = new ParseQuery("Playground");
