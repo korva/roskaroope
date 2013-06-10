@@ -1,7 +1,7 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1370551515000 238 cb07c0950657a8d9fb0b4211b28ac8cf15db92fa /home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/values/strings.xml
+1370852055000 4876 eddcacd4deed85c49028f7ba177ea60ae36ab6e9 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/values/strings.xml
 1370551515000 211 4e1904afba59d31e5cd6133f6a4c360fa9a5913f /home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/values/dimens.xml
 1369036049000 28637 6e41d7f469e8abf07159991af6dc01ca5700aaf5 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/drawable-mdpi/button_capture_pressed.png
 1370552797000 319 69b87c2bf001476da087ddc014e43c5c4f2b1f66 /home/jaakko/androidapps/RoskaRoope/RoskaRoope/src/main/res/anim/right_slide_in.xml

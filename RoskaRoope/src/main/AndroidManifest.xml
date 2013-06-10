@@ -9,7 +9,7 @@
             android:protectionLevel="signature" />
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="11"
         android:targetSdkVersion="16" />
 
     <uses-permission android:name="android.permission.CAMERA" />
@@ -39,6 +39,10 @@
         <activity android:name=".CameraActivity"/>
         <activity android:name=".TrashMapActivity"/>
         <activity android:name=".ScoreActivity"/>
+
+        <meta-data
+                android:name="com.google.android.maps.v2.API_KEY"
+                android:value="AIzaSyCuT-TXGOGAB8MYsWNCUSEcpudqQps2pzQ" />
     </application>
 
 </manifest>

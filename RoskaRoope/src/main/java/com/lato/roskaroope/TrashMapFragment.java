@@ -1,6 +1,7 @@
 package com.lato.roskaroope;
 
 import android.app.Activity;
+import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -16,6 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -26,12 +29,13 @@ public class TrashMapFragment extends MapFragment {
 
     private static final String TAG = "Leikkimaan";
     private final int SEARCH_LIMIT_DEFAULT = 40;
-    private LatLng mSelectedPoint = null;
+    private TrashCan mTarget = null;
     private GoogleMap mMap = null;
     private HashMap<Marker, TrashCan> mMarkerObjectMap = new HashMap<Marker, TrashCan>();
+    private ArrayList<TrashCan> mSpotList = new ArrayList<TrashCan>();
 
     // Used to communicate spot selection events back to containing activity
-    OnMapSpotSelectedListener mListener;
+    OnTargetReachedListener mListener;
 
     static TrashMapFragment newInstance(double latitude, double longitude) {
         TrashMapFragment f = new TrashMapFragment();
@@ -53,26 +57,10 @@ public class TrashMapFragment extends MapFragment {
 
         Log.d(TAG, "onCreate (map)");
 
-        double latitude = 0;
-        double longitude = 0;
-
-        Bundle args = getArguments();
-
-        if(args != null) {
-            latitude = args.getDouble("latitude");
-            longitude = args.getDouble("longitude");
-            if(latitude == 0 || longitude == 0) return;
-            mSelectedPoint = new LatLng(latitude, longitude);
-        } else {
-            return;
-        }
-
         // Force bottom menu invalidation and add this fragment's menu items
         setHasOptionsMenu(true);
 
-        if(mSelectedPoint != null) {
-            fetchSpots(mSelectedPoint, SEARCH_LIMIT_DEFAULT);
-        }
+        fetchSpots(null, SEARCH_LIMIT_DEFAULT);
 
     }
 
@@ -94,7 +82,7 @@ public class TrashMapFragment extends MapFragment {
             }
         });
 
-        if(mSelectedPoint != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mSelectedPoint, 15));
+        if(mTarget != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 15));
         if(mSpotList != null) populateMap(mSpotList);
         return root;
     }
@@ -103,7 +91,7 @@ public class TrashMapFragment extends MapFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (OnMapSpotSelectedListener) activity;
+            mListener = (OnTargetReachedListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString() + " must implement OnMapSpotSelectedListener");
         }
@@ -118,15 +106,43 @@ public class TrashMapFragment extends MapFragment {
         return;
     }
 
-    public void setSelectedSpot(ParseObject spot) {
+    public void updateCurrentLocation(Location location) {
+        // check location to selected spot
+        // if under treshold, fire event to trigger score activity
+        if (mTarget == null) {
+            // find the nearest trash can
+            double nearest = Double.MAX_VALUE;
+            for(TrashCan can : mSpotList) {
+                double dist = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), can.location.latitude, can.location.longitude);
+                if(dist < nearest) mTarget = can;
+            }
 
-        mSelectedPoint = new LatLng(ppoint.getLatitude(), ppoint.getLongitude());
+            Log.d(TAG, "Nearest trash can was " + mTarget.name + ", " + nearest*1000 + " m away.");
+
+        }
+        double distance = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), mTarget.location.latitude, mTarget.location.longitude)*1000;
+        Log.d(TAG, "Distance to target trash can is " + distance + " m");
+
+        if(distance < 50) {
+            mListener.onTargetReached(mTarget);
+        }
+
+    }
+
+    public void setSelectedSpot(TrashCan spot) {
+
+        mTarget = spot;
     }
 
     private void fetchSpots(LatLng center, int limit) {
         if(center == null || limit == 0) return;
 
-        ParseGeoPoint userLocation = new ParseGeoPoint(center.latitude, center.longitude);
+        mSpotList.clear();
+        mSpotList.add(new TrashCan(21.45678, 71.2353634, "Roskis1"));
+        mSpotList.add(new TrashCan(21.45678, 71.3353634, "Roskis2"));
+        mSpotList.add(new TrashCan(21.45678, 71.4353634, "Roskis3"));
+
+        /*ParseGeoPoint userLocation = new ParseGeoPoint(center.latitude, center.longitude);
         ParseQuery query = new ParseQuery("Playground");
         query.whereNear("location", userLocation);
         query.setLimit(limit);
@@ -142,7 +158,7 @@ public class TrashMapFragment extends MapFragment {
                     Log.d("score", "Error: " + e.getMessage());
                 }
             }
-        });
+        });*/
     }
 
 
@@ -172,11 +188,16 @@ public class TrashMapFragment extends MapFragment {
     }
 
     // Container Activity must implement this interface
-    public interface OnMapSpotSelectedListener {
-        public void onMapSpotSelected(TrashCan spot);
+    public interface OnTargetReachedListener {
+        public void onTargetReached(TrashCan spot);
     }
 
     public class TrashCan {
+
+        public TrashCan(double latitude, double longitude, String newName) {
+            location = new LatLng(latitude, longitude);
+            name = newName;
+        }
         public LatLng location = null;
         public String name = null;
     }
