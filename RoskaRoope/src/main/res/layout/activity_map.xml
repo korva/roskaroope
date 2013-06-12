@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:tileMode="repeat" >
 
+    <fragment
+            class="com.lato.roskaroope.TrashMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="13dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:width="200dp"
+            android:text="Roskat pönttöön!"
+            android:id="@+id/returnButton"
+            android:onClick="onReturnButtonClicked"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="13dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="6dp"
+            android:text=">>"
+            android:onClick="onCheatButtonClicked"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/nearestText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:width="200dp"
+            android:background="#FF6A00"
+            android:padding="6dp"
+            android:text="Haetaan sijaintiasi..."
+            />
 
 
-</LinearLayout>
+</RelativeLayout>

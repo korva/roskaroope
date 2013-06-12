@@ -35,7 +35,7 @@ public class TrashMapFragment extends MapFragment {
     private ArrayList<TrashCan> mSpotList = new ArrayList<TrashCan>();
 
     // Used to communicate spot selection events back to containing activity
-    OnTargetReachedListener mListener;
+    MapEventListener mListener;
 
     static TrashMapFragment newInstance(double latitude, double longitude) {
         TrashMapFragment f = new TrashMapFragment();
@@ -92,7 +92,7 @@ public class TrashMapFragment extends MapFragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (OnTargetReachedListener) activity;
+            mListener = (MapEventListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString() + " must implement OnMapSpotSelectedListener");
         }
@@ -124,7 +124,11 @@ public class TrashMapFragment extends MapFragment {
                 }
             }
 
+            if(mTarget == null) return;
+
             Log.d(TAG, "Nearest trash can was " + mTarget.name + ", " + nearest*1000 + " m away.");
+
+            if(mMap != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 15));
 
         }
         double distance = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), mTarget.location.latitude, mTarget.location.longitude)*1000;
@@ -132,6 +136,8 @@ public class TrashMapFragment extends MapFragment {
 
         if(distance < 50) {
             mListener.onTargetReached(mTarget);
+        } else {
+            mListener.onTargetUpdated(mTarget, (int)distance);
         }
 
     }
@@ -196,7 +202,8 @@ public class TrashMapFragment extends MapFragment {
     }
 
     // Container Activity must implement this interface
-    public interface OnTargetReachedListener {
+    public interface MapEventListener {
+        public void onTargetUpdated(TrashCan spot, int distance);
         public void onTargetReached(TrashCan spot);
     }
 

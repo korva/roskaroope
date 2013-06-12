@@ -14,14 +14,16 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
-import com.lato.roskaroope.TrashMapFragment.OnTargetReachedListener;
 
 /**
  * Created by jaakko on 6/6/13.
  */
-public class TrashMapActivity extends Activity implements OnTargetReachedListener {
+public class TrashMapActivity extends Activity implements TrashMapFragment.MapEventListener {
 
     private static final String TAG = "TrashMapActivity";
 
@@ -91,6 +93,17 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
 
     }
 
+    public void onCheatButtonClicked(View v) {
+        onTargetReached(null);
+    }
+
+    public void onReturnButtonClicked(View v) {
+        Intent i = new Intent(this, ScoreActivity.class);
+        startActivity(i);
+        finish();
+
+    }
+
     private ServiceConnection mConnection = new ServiceConnection() {
         public void onServiceConnected(ComponentName className, IBinder service) {
 
@@ -144,11 +157,15 @@ public class TrashMapActivity extends Activity implements OnTargetReachedListene
     }
 
     public void onTargetReached(TrashMapFragment.TrashCan spot) {
-        // A spot has been selected from search fragment.
-        // Switch to main view and show it
-        Intent i = new Intent(this, ScoreActivity.class);
-        startActivity(i);
-        finish();
+
+        Button button = (Button)findViewById(R.id.returnButton);
+        button.setVisibility(View.VISIBLE);
+    }
+
+    public void onTargetUpdated(TrashMapFragment.TrashCan spot, int distance) {
+        // update game UI
+        TextView text = (TextView)findViewById(R.id.nearestText);
+        text.setText("Lähin roskis " + distance + " m päässä");
 
     }
 
