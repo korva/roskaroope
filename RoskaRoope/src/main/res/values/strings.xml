@@ -34,9 +34,7 @@
     <string name="dialogOpen">Select</string>
     <string name="dialogCancel">Cancel</string>
     <string name="dialogNavigate">Navigate</string>
-    <string name="locationSettingsDialog">Looks like you have not enabled location usage in Settings. Would you like to do that now?</string>
     <string name="Yes">Yes</string>
-    <string name="No">No</string>
     <string name="sendMailUsing">Send mail using</string>
     <string name="epicFailDialog">Failed to start app. Please re-install. Apologies.</string>
     <string name="centerOnNearest">Show nearest</string>
@@ -46,7 +44,6 @@
     <string name="aboutFeedbackText">Feedback from Android version</string>
     <string name="aboutSendUsing">Send mail using:</string>
     <string name="splash_building_database">Fetching data...</string>
-    <string name="search">Search</string>
     <string name="menuMode">Summer/winter mode</string>
     <string name="modeDialogText">Please select:</string>
     <string name="OK">OK</string>

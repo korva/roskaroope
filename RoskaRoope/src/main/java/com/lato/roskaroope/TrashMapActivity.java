@@ -29,7 +29,7 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
 
     com.lato.roskaroope.LocationService mLocationService = null;
     LocationServiceListener mLocationServiceListener = null;
-    private static final int mLocationAccuracyTreshold = 2000;
+    private static final int mLocationAccuracyTreshold = 5000;
 
     // User's last known location
     private Location mCurrentLocation = null;
@@ -156,6 +156,11 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
         public void onLocationAvailable(Location location);
     }
 
+    public void onTargetCompleted(TrashMapFragment.TrashCan spot) {
+
+       onReturnButtonClicked(null);
+    }
+
     public void onTargetReached(TrashMapFragment.TrashCan spot) {
 
         Button button = (Button)findViewById(R.id.returnButton);
@@ -164,8 +169,8 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
 
     public void onTargetUpdated(TrashMapFragment.TrashCan spot, int distance) {
         // update game UI
-        TextView text = (TextView)findViewById(R.id.nearestText);
-        text.setText("Lähin roskis " + distance + " m päässä");
+        //TextView text = (TextView)findViewById(R.id.nearestText);
+        //text.setText("Lähin roskis " + distance + " m päässä");
 
     }
 

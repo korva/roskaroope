@@ -3,9 +3,10 @@
   <component name="AndroidConfiguredLogFilters">
     <filters>
       <filter>
+        <option name="logLevel" value="verbose" />
         <option name="logMessagePattern" value="" />
         <option name="logTagPattern" value="" />
-        <option name="name" value="Roska" />
+        <option name="name" value="Unnamed-0" />
         <option name="packageNamePattern" value="com.lato.roskaroope" />
         <option name="pid" value="" />
       </filter>
@@ -23,10 +24,10 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Roska" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Unnamed-0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="149f5336-7ccc-480d-aaaa-7e3483082062" name="Default" comment="" />
+    <list default="true" id="dba98457-de32-45bb-b92c-6618b3e8b075" name="Default" comment="" />
     <ignored path="RoskaRoope.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,7 +44,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -80,6 +80,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,49 +90,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TrashMapActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
+      <file leaf-file-name="TrashMapFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="5" selection-start="5917" selection-end="5917" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2295">
-              <folding />
+            <state line="196" column="48" selection-start="6424" selection-end="6424" vertical-scroll-proportion="0.8013356" vertical-offset="3048" max-vertical-offset="5940">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1178#1196#0" expanded="true" />
+                <element signature="e#1257#1267#0" expanded="true" />
+                <element signature="e#2534#3296#0" expanded="true" />
+                <element signature="e#3285#3286#0" expanded="true" />
+                <element signature="e#3395#3712#0" expanded="true" />
+                <element signature="e#3701#3702#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_map.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="activity_map.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="33" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.56473213" vertical-offset="407" max-vertical-offset="855">
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="19" selection-start="4669" selection-end="4669" vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="1275">
+            <state line="59" column="18" selection-start="2154" selection-end="2154" vertical-scroll-proportion="-23.5" vertical-offset="404" max-vertical-offset="1170">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-              <folding />
-            </state>
+      <file leaf-file-name="activity_score.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_score.xml">
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TrashMapFragment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="5" selection-start="4564" selection-end="4564" vertical-scroll-proportion="-21.08" vertical-offset="1303" max-vertical-offset="3075">
+            <state line="42" column="35" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="936">
               <folding />
             </state>
           </provider>
@@ -140,21 +134,48 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="5" selection-start="692" selection-end="824" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="15" column="47" selection-start="410" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_score.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_score.xml">
+      <file leaf-file-name="ScoreActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="195">
+            <state line="22" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="522">
               <folding />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="0" selection-start="1297" selection-end="1297" vertical-scroll-proportion="-20.571428" vertical-offset="0" max-vertical-offset="684">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrashMapActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="172" column="10" selection-start="6215" selection-end="6215" vertical-scroll-proportion="0.0" vertical-offset="2050" max-vertical-offset="2844">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="17" selection-start="4044" selection-end="4044" vertical-scroll-proportion="0.0" vertical-offset="2502" max-vertical-offset="3276">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -165,64 +186,23 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
-  <component name="GradleLocalSettings">
-    <option name="tasksExpandState">
-      <map>
-        <entry key="" value="true" />
-      </map>
-    </option>
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="RoskaRoope" />
-              <option name="path" value="$PROJECT_DIR$/build.gradle" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="RoskaRoope-RoskaRoope" />
-                <option name="path" value="$PROJECT_DIR$/RoskaRoope/build.gradle" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value="RoskaRoope" />
-                <option name="path" value="$PROJECT_DIR$/build.gradle" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_camera.xml" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/build/res/all/debug/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/GeoUtils.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/build/res/all/debug/menu/main.xml" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationService.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/RoskaRoope/build.gradle" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_score.xml" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1665" />
+    <option name="x" value="65" />
     <option name="y" value="-4" />
-    <option name="width" value="1536" />
-    <option name="height" value="905" />
+    <option name="width" value="1856" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -250,6 +230,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,55 +238,11 @@
               <option name="myItemId" value="RoskaRoope" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android 4.2.2 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="RoskaRoope" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
@@ -316,18 +253,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="RoskaRoope" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
@@ -342,18 +267,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="RoskaRoope" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
@@ -374,18 +287,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RoskaRoope" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -401,76 +302,20 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Libraries" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/production/takuukuitti/apps/android" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="014E0F4C13010011" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Nexus4" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
-  <component name="RunManager" selected="Android Application.RoskaRoope-RoskaRoope">
-    <configuration default="false" name="build" type="GroovyScriptRunConfiguration" factoryName="Groovy" temporary="true">
-      <module name="RoskaRoope-RoskaRoope" />
-      <setting name="path" value="file://$PROJECT_DIR$/RoskaRoope/build.gradle" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$/RoskaRoope" />
-      <setting name="debug" value="false" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method>
-        <option name="Make" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Android Application.main">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -542,12 +387,12 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="RoskaRoope-RoskaRoope" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="RoskaRoope-RoskaRoope" />
+    <configuration default="false" name="main" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="main" />
       <option name="ACTIVITY_CLASS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="TARGET_SELECTION_MODE" value="USB_DEVICE" />
       <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
@@ -560,15 +405,9 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Android Application.RoskaRoope-RoskaRoope" />
-      <item index="1" class="java.lang.String" itemvalue="Groovy.build" />
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.main" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Groovy.build" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -584,11 +423,6 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
-  <component name="SliceManager">
-    <option name="analysisUIOptions">
-      <AnalysisUIOptions />
-    </option>
-  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -608,39 +442,35 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="149f5336-7ccc-480d-aaaa-7e3483082062" name="Default" comment="" />
-      <created>1370551515727</created>
-      <updated>1370551515727</updated>
-      <workItem from="1370551529781" duration="673000" />
+      <changelist id="dba98457-de32-45bb-b92c-6618b3e8b075" name="Default" comment="" />
+      <created>1374222011865</created>
+      <updated>1374222011865</updated>
     </task>
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="673000" />
-  </component>
   <component name="ToolWindowManager">
-    <frame x="1665" y="-4" width="1536" height="905" extended-state="6" />
-    <editor active="true" />
+    <frame x="65" y="-4" width="1856" height="1085" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997313" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32772544" sideWeight="0.659181" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2710177" sideWeight="0.8783351" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34081903" sideWeight="0.27388963" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34081903" sideWeight="0.7254374" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.628877" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1756393" sideWeight="0.659181" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26050884" sideWeight="0.67165774" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32834226" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -710,195 +540,149 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2550" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/build/res/all/debug/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="23" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="180" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="19" selection-start="4669" selection-end="4669" vertical-scroll-proportion="0.0" vertical-offset="1110" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/GeoUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.031120332" vertical-offset="0" max-vertical-offset="482" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="50" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_score.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.2" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="40" selection-start="2571" selection-end="2571" vertical-scroll-proportion="2.5687103" vertical-offset="0" max-vertical-offset="1920">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="5" selection-start="4564" selection-end="4564" vertical-scroll-proportion="-21.08" vertical-offset="1303" max-vertical-offset="3075">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="5" selection-start="692" selection-end="824" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+        <state line="21" column="0" selection-start="948" selection-end="948" vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="684">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="5" selection-start="5917" selection-end="5917" vertical-scroll-proportion="0.0" vertical-offset="903" max-vertical-offset="2295">
+        <state line="172" column="10" selection-start="6215" selection-end="6215" vertical-scroll-proportion="0.0" vertical-offset="3078" max-vertical-offset="3276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="17" selection-start="4044" selection-end="4044" vertical-scroll-proportion="0.0" vertical-offset="2502" max-vertical-offset="3276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="2162" selection-end="2162" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1476">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="33" selection-start="1790" selection-end="1790" vertical-scroll-proportion="0.56473213" vertical-offset="407" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="18" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0" vertical-offset="1044" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Android</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>Android 4.2.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>RoskaRoope</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>google-play-services</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="735" selection-end="735" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="4050">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1178#1196#0" expanded="true" />
+            <element signature="e#1257#1267#0" expanded="true" />
+            <element signature="e#2534#3296#0" expanded="true" />
+            <element signature="e#3285#3286#0" expanded="true" />
+            <element signature="e#3395#3712#0" expanded="true" />
+            <element signature="e#3701#3702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="13" selection-start="688" selection-end="688" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3186">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="2162" selection-end="2162" vertical-scroll-proportion="0.219163" vertical-offset="467" max-vertical-offset="1476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="17" selection-start="4044" selection-end="4044" vertical-scroll-proportion="0.0" vertical-offset="1877" max-vertical-offset="2970">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_score.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="35" selection-start="1959" selection-end="1959" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="936">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="527" selection-end="527" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="47" selection-start="410" selection-end="449" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1297" selection-end="1297" vertical-scroll-proportion="-20.571428" vertical-offset="0" max-vertical-offset="684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="18" selection-start="2154" selection-end="2154" vertical-scroll-proportion="-23.5" vertical-offset="404" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="172" column="10" selection-start="6215" selection-end="6215" vertical-scroll-proportion="0.0" vertical-offset="2246" max-vertical-offset="2844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="196" column="48" selection-start="6424" selection-end="6424" vertical-scroll-proportion="0.8013356" vertical-offset="3048" max-vertical-offset="5940">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1178#1196#0" expanded="true" />
+            <element signature="e#1257#1267#0" expanded="true" />
+            <element signature="e#2534#3296#0" expanded="true" />
+            <element signature="e#3285#3286#0" expanded="true" />
+            <element signature="e#3395#3712#0" expanded="true" />
+            <element signature="e#3701#3702#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
 

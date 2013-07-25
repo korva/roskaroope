@@ -1,6 +1,7 @@
 package com.lato.roskaroope;
 
 import android.app.Activity;
+import android.content.res.AssetManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +19,10 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,6 +38,7 @@ public class TrashMapFragment extends MapFragment {
     private GoogleMap mMap = null;
     private HashMap<Marker, TrashCan> mMarkerObjectMap = new HashMap<Marker, TrashCan>();
     private ArrayList<TrashCan> mSpotList = new ArrayList<TrashCan>();
+    private LatLng mCurrentLocation = null;
 
     // Used to communicate spot selection events back to containing activity
     MapEventListener mListener;
@@ -73,18 +79,39 @@ public class TrashMapFragment extends MapFragment {
         mMap = getMap();
         mMap.setMyLocationEnabled(true);
 
+        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                // check if we are close enough
+                TrashCan can = mMarkerObjectMap.get(marker);
+                if(can != null & mCurrentLocation != null) {
+                    double dist = GeoUtils.distanceKm(mCurrentLocation.latitude, mCurrentLocation.longitude, can.location.latitude, can.location.longitude);
+                    if(dist*1000 < 400) {
+                        marker.setSnippet("Klikkaa ja palauta roskat!");
+                    } else {
+                        marker.setSnippet("Tämä roskis on liian kaukana...");
+                    }
+                }
+                return false;
+            }
+        });
+
         // When info windows is clicked, select spot
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
 
             @Override
             public void onInfoWindowClick(Marker marker) {
-
+                TrashCan can = mMarkerObjectMap.get(marker);
+                if(can != null) {
+                    mListener.onTargetCompleted(can);
+                }
 
             }
         });
 
-        if(mTarget != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 15));
+
         if(mSpotList != null) populateMap(mSpotList);
+        if(mTarget != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 15));
         return root;
     }
 
@@ -110,6 +137,8 @@ public class TrashMapFragment extends MapFragment {
     public void updateCurrentLocation(Location location) {
 
         Log.d(TAG, "TrashMapFragment updateCurrentLocation");
+
+        mCurrentLocation = new LatLng(location.getLatitude(), location.getLongitude());
 
         // check location to selected spot
         // if under treshold, fire event to trigger score activity
@@ -151,10 +180,19 @@ public class TrashMapFragment extends MapFragment {
         //if(center == null || limit == 0) return;
 
         mSpotList.clear();
-        mSpotList.add(new TrashCan(61.4508369, 23.9542286, "Roskis1"));
-        mSpotList.add(new TrashCan(61.5508369,23.8542286, "Roskis2"));
-        mSpotList.add(new TrashCan(61.4808369, 23.8842286, "Roskis3"));
-        mSpotList.add(new TrashCan(61.4508369, 23.8542286, "Roskis4"));
+
+        AssetManager assetManager = this.getActivity().getAssets();
+        InputStream stream = null;
+
+        try {
+            stream = assetManager.open("tampere.txt");
+            initializeDatabase(stream);
+        } catch (IOException e) {
+             Log.d(TAG,"Opening file failed");
+            return;
+        }
+
+
 
         /*ParseGeoPoint userLocation = new ParseGeoPoint(center.latitude, center.longitude);
         ParseQuery query = new ParseQuery("Playground");
@@ -189,7 +227,6 @@ public class TrashMapFragment extends MapFragment {
                     .title(items.get(i).name));
                     //.icon(BitmapDescriptorFactory.fromResource(R.drawable.playground_favorite)));
 
-
             mMarkerObjectMap.put(mark, items.get(i));
 
         }
@@ -205,6 +242,74 @@ public class TrashMapFragment extends MapFragment {
     public interface MapEventListener {
         public void onTargetUpdated(TrashCan spot, int distance);
         public void onTargetReached(TrashCan spot);
+        public void onTargetCompleted(TrashCan spot);
+    }
+
+    public boolean initializeDatabase(InputStream stream) {
+         Log.d(TAG,"Starting db population.");
+
+        if (stream == null) return false;
+
+        long start = System.nanoTime();
+
+
+        // use BufferedReader for reading lines
+        BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
+        String line = "";
+        int count = 0;
+
+        try {
+            while ((line = reader.readLine()) != null)   {
+                count++;
+                boolean ok = processLine(line, "Roskis " + count);
+                if (!ok) Log.d(TAG, "Populating line failed: " + line);
+
+                if(count > 300) break;
+
+            }
+
+        } catch (IOException e1) {
+             Log.d(TAG,"Reading line failed");
+        }
+
+        long end = System.nanoTime() - start;
+         Log.d(TAG, "DB init took " + end/1000000 + " ms");
+
+
+        if (stream != null) {
+            try {
+                stream.close();
+            } catch (IOException e) {}
+        }
+
+        return true;
+    }
+
+    // split up line and bind values to ih
+    private boolean processLine(String line, String title) {
+
+
+        if (line.length() < 20) {
+             Log.d(TAG, "Too short line: " + line);
+            return false; // too little input info
+        }
+
+        String delimiter = ";";
+        String[] temp = line.split(delimiter);
+
+        Double latitude = new Double(temp[0]);
+        Double longitude = new Double(temp[1]);
+
+        if(latitude == 0 || longitude == 0) {
+             Log.d(TAG, "Coordinates invalid: " + line);
+            return false;
+        }
+
+        mSpotList.add(new TrashCan(latitude, longitude, title));
+
+         Log.d(TAG, "Adding spot: " + temp[0].trim());
+        return true;
+
     }
 
     public class TrashCan {
