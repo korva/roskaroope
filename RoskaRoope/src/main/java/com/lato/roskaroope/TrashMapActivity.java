@@ -1,9 +1,7 @@
 package com.lato.roskaroope;
 
-import android.app.Activity;
+
 import android.app.AlertDialog;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,28 +11,35 @@ import android.location.Location;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 import com.google.android.gms.maps.model.LatLng;
 
 /**
  * Created by jaakko on 6/6/13.
  */
-public class TrashMapActivity extends Activity implements TrashMapFragment.MapEventListener {
+public class TrashMapActivity extends FragmentActivity implements TrashMapFragment.MapEventListener {
 
     private static final String TAG = "TrashMapActivity";
 
     com.lato.roskaroope.LocationService mLocationService = null;
     LocationServiceListener mLocationServiceListener = null;
     private static final int mLocationAccuracyTreshold = 5000;
+    private long mStartTime = 0;
 
     // User's last known location
     private Location mCurrentLocation = null;
     // Default location for map in case location not known
     private LatLng mDefaultLocation = new LatLng(61.497518,23.762419);
+    private Location mStartingLocation = null;
+
+    private TrashMapFragment.TrashCan mTarget = null;
 
     private TrashMapFragment mMapFragment = null;
 
@@ -53,6 +58,7 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
                 if (location.getAccuracy() > mLocationAccuracyTreshold) return;
 
                 mCurrentLocation = location;
+                if(mStartingLocation == null) mStartingLocation = location;
 
                 if(mMapFragment != null) mMapFragment.updateCurrentLocation(location);
 
@@ -63,10 +69,12 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
         bindService(new Intent(this, LocationService.class), mConnection, Context.BIND_AUTO_CREATE);
 
         showMapFragment();
+
+        mStartTime = System.currentTimeMillis();
     }
 
     private void showMapFragment() {
-        FragmentManager fragMgr = getFragmentManager();
+        FragmentManager fragMgr = this.getSupportFragmentManager();
         FragmentTransaction ft = fragMgr.beginTransaction();
 
         // Check if the fragment is already initialized
@@ -98,9 +106,22 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
     }
 
     public void onReturnButtonClicked(View v) {
-        Intent i = new Intent(this, ScoreActivity.class);
-        startActivity(i);
-        finish();
+
+        if(mTarget != null && mStartingLocation != null) {
+
+            // Get time for completion
+            long time = System.currentTimeMillis() - mStartTime;
+
+            // Get distance from start to finish
+            double distance = GeoUtils.distanceKm(mStartingLocation.getLatitude(), mStartingLocation.getLongitude(),
+                    mTarget.location.latitude, mTarget.location.longitude);
+
+            Intent i = new Intent(this, ScoreActivity.class);
+            i.putExtra("distance", distance);
+            i.putExtra("time", time);
+            startActivity(i);
+            finish();
+        }
 
     }
 
@@ -167,10 +188,12 @@ public class TrashMapActivity extends Activity implements TrashMapFragment.MapEv
         button.setVisibility(View.VISIBLE);
     }
 
-    public void onTargetUpdated(TrashMapFragment.TrashCan spot, int distance) {
+    public void onTargetUpdated(TrashMapFragment.TrashCan spot, double distance) {
         // update game UI
         //TextView text = (TextView)findViewById(R.id.nearestText);
         //text.setText("Lähin roskis " + distance + " m päässä");
+
+        mTarget = spot;
 
     }
 

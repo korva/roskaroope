@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * Created by jaakko on 6/9/13.
  */
-public class TrashMapFragment extends MapFragment {
+public class TrashMapFragment extends SupportMapFragment {
 
     private static final String TAG = "Leikkimaan";
     private final int SEARCH_LIMIT_DEFAULT = 40;
@@ -91,6 +91,7 @@ public class TrashMapFragment extends MapFragment {
                     } else {
                         marker.setSnippet("Tämä roskis on liian kaukana...");
                     }
+                    mListener.onTargetUpdated(can, dist*1000);
                 }
                 return false;
             }
@@ -240,7 +241,7 @@ public class TrashMapFragment extends MapFragment {
 
     // Container Activity must implement this interface
     public interface MapEventListener {
-        public void onTargetUpdated(TrashCan spot, int distance);
+        public void onTargetUpdated(TrashCan spot, double distance);
         public void onTargetReached(TrashCan spot);
         public void onTargetCompleted(TrashCan spot);
     }

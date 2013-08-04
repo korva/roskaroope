@@ -4,9 +4,9 @@
     <string name="app_name">Roska-Roope</string>
     <string name="action_settings">Roska-Roope</string>
     <string name="title_activity_main">Roska-Roope</string>
-    <string name="title_activity_map">Map</string>
-    <string name="title_activity_about">About the app</string>
-    <string name="title_activity_splash">Roska-Roope</string>
+    <string name="title_activity_map">Vie roska roskikseen</string>
+    <string name="title_activity_camera">Kuvaa ja poimi roska</string>
+    <string name="title_activity_score">Roska siivottu!</string>
     <string name="splash_loading">Please wait...</string>
     <string name="OK">OK</string>
     <string name="Cancel">Cancel</string>

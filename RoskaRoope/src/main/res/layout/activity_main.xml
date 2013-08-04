@@ -16,7 +16,8 @@
             android:id="@+id/button"
             android:onClick="onPlayButtonClicked"
             android:width="200dp"
-           android:layout_above="@+id/button2"
+            android:textColor="#FFFFFF"
+            android:layout_above="@+id/button2"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="28dp"/>
 
@@ -26,6 +27,7 @@
             android:text="Näytä lähin roskis"
             android:id="@+id/button2"
             android:width="200dp"
+            android:textColor="#FFFFFF"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/button"/>
 
