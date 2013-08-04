@@ -2,7 +2,6 @@
   <library name="libs">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/RoskaRoope/libs/android-support-v4.jar!/" />
-      <root url="jar://$PROJECT_DIR$/RoskaRoope/libs/google-play-services.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

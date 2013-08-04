@@ -48,7 +48,9 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_main);
+        //showMapFragment();
+
+        setContentView(R.layout.activity_map);
 
         // Create a listener for LocationService events
         mLocationServiceListener = new LocationServiceListener() {
@@ -68,7 +70,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
         // Bind to location service
         bindService(new Intent(this, LocationService.class), mConnection, Context.BIND_AUTO_CREATE);
 
-        showMapFragment();
+
 
         mStartTime = System.currentTimeMillis();
     }
