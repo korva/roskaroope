@@ -7,6 +7,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -22,7 +26,7 @@ import com.google.android.gms.maps.model.LatLng;
 /**
  * Created by jaakko on 6/6/13.
  */
-public class TrashMapActivity extends FragmentActivity implements TrashMapFragment.MapEventListener {
+public class TrashMapActivity extends FragmentActivity implements TrashMapFragment.MapEventListener, SensorEventListener {
 
     private static final String TAG = "TrashMapActivity";
 
@@ -41,7 +45,10 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     private TrashMapFragment mMapFragment = null;
 
-
+    private SensorManager mSensorManager = null;
+    private Sensor mCompass = null;
+    // Azimuth between current location and target spot
+    private double mAzimuth = 0;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +59,15 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
         Button button = (Button)findViewById(R.id.returnButton);
         button.setVisibility(View.GONE);
+
+        // Set up compass
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mCompass = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+
+        if(mCompass != null) {
+            // orientation sensor available
+            mSensorManager.registerListener(this, mCompass, SensorManager.SENSOR_DELAY_UI);
+        }
 
         // Create a listener for LocationService events
         mLocationServiceListener = new LocationServiceListener() {
@@ -183,7 +199,43 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
             text.setText("Lähin roskis " + dist/1000 + " km " + dist%1000 + " m päässä");
         }
 
+        if(spot == null) return;
+
         mTarget = spot;
+
+        calculateAzimuth(mTarget.location.latitude, mTarget.location.longitude);
+
+    }
+
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {	}
+
+    public void onSensorChanged(SensorEvent event) {
+
+        // only accept magnetometer readings
+        if (event.sensor.getType() != Sensor.TYPE_ORIENTATION) return;
+
+        // no point updating compass if location is not known
+        if (mCurrentLocation == null) return;
+
+        float northAzimuth = event.values[0];
+        double direction = -northAzimuth + mAzimuth;
+
+        CompassView view = (CompassView)findViewById(R.id.compass);
+        view.setEnabled(true);
+        view.setAngle(direction);
+
+        //Log.d(TAG, "from north: " + northAzimuth + " spotA: " + mAzimuth + " dir: " + direction + "acc: " + event.accuracy);
+
+
+
+    }
+
+    void calculateAzimuth(double targetLatitude, double targetLongitude) {
+
+        if (mCurrentLocation == null) return;
+
+        mAzimuth = GeoUtils.bearing(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude(),
+                targetLatitude, targetLongitude);
 
     }
 

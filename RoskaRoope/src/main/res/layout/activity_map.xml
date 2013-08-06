@@ -29,21 +29,29 @@
                 android:id="@+id/returnButton"
                 android:onClick="onReturnButtonClicked"/>
 
- <!--       <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginBottom="13dp"
+        <!--       <Button
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:layout_marginBottom="13dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_alignParentLeft="true"
+                       android:layout_marginLeft="6dp"
+                       android:text=">>"
+                       android:onClick="onCheatButtonClicked"/>-->
+        <com.lato.roskaroope.CompassView
+                android:id="@+id/compass"
+                android:layout_height="60dp"
+                android:layout_width="60dp"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="6dp"
-                android:text=">>"
-                android:onClick="onCheatButtonClicked"/>-->
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"/>
 
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textAppearance="?android:attr/textAppearanceSmall"
                 android:id="@+id/nearestText"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"

@@ -9,6 +9,18 @@
     tools:context=".MainActivity"
     android:background="@android:color/background_dark">
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roska-Roope -pelissä keräät mainetta ja kunnia löytämällä lähistöltäsi roskia ja viemällä ne mahdollisimman nopeasti roskikseen!\n\nOta kuva roskasta, jonka jälkeen sinulle näytetään lähin roskis. Loppu on itsestäsi kiinni!\n\nPeli toimii tällä hetkellä Tampereen alueella."
+            android:id="@+id/instructionText"
+            android:width="300dp"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"/>
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -17,18 +29,9 @@
             android:onClick="onPlayButtonClicked"
             android:width="200dp"
             android:textColor="#FFFFFF"
-            android:layout_above="@+id/button2"
+            android:layout_below="@id/instructionText"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="28dp"/>
+            android:layout_marginTop="28dp"/>
 
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Näytä lähin roskis"
-            android:id="@+id/button2"
-            android:width="200dp"
-            android:textColor="#FFFFFF"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/button"/>
 
 </RelativeLayout>
