@@ -193,25 +193,6 @@ public class TrashMapFragment extends SupportMapFragment {
             return;
         }
 
-
-
-        /*ParseGeoPoint userLocation = new ParseGeoPoint(center.latitude, center.longitude);
-        ParseQuery query = new ParseQuery("Playground");
-        query.whereNear("location", userLocation);
-        query.setLimit(limit);
-
-        query.findInBackground(new FindCallback() {
-            public void done(List<ParseObject> spotList, ParseException e) {
-                if (e == null) {
-                    Log.d("score", "Retrieved " + spotList.size() + " spots");
-                    mSpotList = spotList;
-                    if(mMap != null) populateMap(mSpotList);
-
-                } else {
-                    Log.d("score", "Error: " + e.getMessage());
-                }
-            }
-        });*/
     }
 
 

@@ -12,12 +12,10 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -48,9 +46,12 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //showMapFragment();
-
         setContentView(R.layout.activity_map);
+
+        mMapFragment = (TrashMapFragment) (getSupportFragmentManager().findFragmentById(R.id.map));
+
+        Button button = (Button)findViewById(R.id.returnButton);
+        button.setVisibility(View.GONE);
 
         // Create a listener for LocationService events
         mLocationServiceListener = new LocationServiceListener() {
@@ -75,26 +76,6 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
         mStartTime = System.currentTimeMillis();
     }
 
-    private void showMapFragment() {
-        FragmentManager fragMgr = this.getSupportFragmentManager();
-        FragmentTransaction ft = fragMgr.beginTransaction();
-
-        // Check if the fragment is already initialized
-        if (mMapFragment == null) {
-            // If not, instantiate and add it to the activity
-            if(mCurrentLocation == null) {
-                mMapFragment = TrashMapFragment.newInstance(mDefaultLocation.latitude, mDefaultLocation.longitude);
-            } else {
-                mMapFragment = TrashMapFragment.newInstance(mCurrentLocation.getLatitude(), mCurrentLocation.getLongitude());
-            }
-            ft.add(android.R.id.content, mMapFragment, "map");
-        } else {
-            // If it exists, simply attach it in order to show it
-            ft.show(mMapFragment);
-        }
-
-        ft.commit();
-    }
 
     protected void onDestroy() {
         super.onDestroy();
@@ -192,8 +173,15 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     public void onTargetUpdated(TrashMapFragment.TrashCan spot, double distance) {
         // update game UI
-        //TextView text = (TextView)findViewById(R.id.nearestText);
-        //text.setText("Lähin roskis " + distance + " m päässä");
+        TextView text = (TextView)findViewById(R.id.nearestText);
+
+        int dist = (int)distance;
+        if(dist < 1000) {
+            text.setText("Lähin roskis " + dist + " m päässä");
+        }
+        else {
+            text.setText("Lähin roskis " + dist/1000 + " km " + dist%1000 + " m päässä");
+        }
 
         mTarget = spot;
 
