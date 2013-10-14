@@ -40,6 +40,7 @@ public class ScoreActivity extends Activity {
         }
 
         long totalScore = timeScore + distanceScore;
+        MainActivity.sharedTotalScore += totalScore;
 
         TextView score = (TextView) findViewById(R.id.scoreText);
         score.setText("Aika: " + time/1000 + " s\n" +
@@ -54,6 +55,7 @@ public class ScoreActivity extends Activity {
     }
 
     public void onQuitButtonClicked(View v) {
-        finish();
+        Intent i = new Intent(this, EndActivity.class);
+        startActivity(i);
     }
 }

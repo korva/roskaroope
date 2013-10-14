@@ -10,6 +10,8 @@ import android.view.View;
 
 public class MainActivity extends Activity {
 
+    public static long sharedTotalScore = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

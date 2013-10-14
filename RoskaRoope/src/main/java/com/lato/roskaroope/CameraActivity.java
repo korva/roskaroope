@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by jaakko on 6/6/13.
  */
@@ -26,6 +29,7 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
     CameraPreview mPreview;
 
     public static Bitmap sharedCameraImage = null;
+    public static List<Bitmap> sharedThumbnails = new ArrayList<Bitmap>();
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -144,6 +148,9 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
 
             if(image != null) {
                 sharedCameraImage = image;
+
+
+
                 Intent intent = new Intent(CameraActivity.this, TrashMapActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
@@ -168,6 +175,10 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
             matrix.postRotate(90);
             Bitmap rotatedBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight(), matrix, true);
             Log.d(TAG, "Got bitmap from camera. w: " + rotatedBitmap.getWidth() + " h: " + rotatedBitmap.getHeight());
+
+            // Create thumbnail
+            Bitmap thumb = Bitmap.createScaledBitmap(rotatedBitmap, 250, 400, false);
+            sharedThumbnails.add(thumb);
 
             return rotatedBitmap;
 

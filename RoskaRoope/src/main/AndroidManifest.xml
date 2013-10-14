@@ -55,6 +55,7 @@
         <activity android:name=".ScoreActivity"
                   android:label="@string/title_activity_score"
                   android:screenOrientation="portrait"/>
+        <activity android:name=".EndActivity" />
 
         <service android:name="com.lato.roskaroope.LocationService" >
         </service>
