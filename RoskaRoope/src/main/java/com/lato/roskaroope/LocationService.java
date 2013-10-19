@@ -14,7 +14,7 @@ import android.util.Log;
 
 public class LocationService extends Service {
 
-	private static final String TAG = "leikkimaan";
+	private static final String TAG = "roskaroope";
 	private LocationManager mLocationManager = null;
 	private static final int LOCATION_INTERVAL = 1000;
 	private static final float LOCATION_DISTANCE = 10f;

@@ -246,7 +246,7 @@ public class TrashMapFragment extends SupportMapFragment {
                 boolean ok = processLine(line, "Roskis " + count);
                 if (!ok) Log.d(TAG, "Populating line failed: " + line);
 
-                if(count > 300) break;
+                //if(count > 300) break;
 
             }
 
@@ -271,7 +271,7 @@ public class TrashMapFragment extends SupportMapFragment {
     private boolean processLine(String line, String title) {
 
 
-        if (line.length() < 20) {
+        if (line.length() < 18) {
              Log.d(TAG, "Too short line: " + line);
             return false; // too little input info
         }
@@ -289,7 +289,7 @@ public class TrashMapFragment extends SupportMapFragment {
 
         mSpotList.add(new TrashCan(latitude, longitude, title));
 
-         Log.d(TAG, "Adding spot: " + temp[0].trim());
+         //Log.d(TAG, "Adding spot: " + temp[0].trim());
         return true;
 
     }
