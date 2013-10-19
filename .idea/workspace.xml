@@ -89,22 +89,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScoreActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ScoreActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="62" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1224">
+            <state line="35" column="44" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.4827586" vertical-offset="378" max-vertical-offset="1242">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ImageAdapter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ImageAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="14" selection-start="1185" selection-end="1185" vertical-scroll-proportion="0.0" vertical-offset="392" max-vertical-offset="990">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,7 +114,7 @@
       <file leaf-file-name="TrashMapFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="17" selection-start="3318" selection-end="3318" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="5040">
+            <state line="166" column="23" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.0" vertical-offset="1164" max-vertical-offset="5040">
               <folding />
             </state>
           </provider>
@@ -141,10 +132,19 @@
       <file leaf-file-name="TrashMapActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="5" selection-start="3457" selection-end="3687" vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4392">
+            <state line="123" column="43" selection-start="4392" selection-end="4392" vertical-scroll-proportion="-9.0" vertical-offset="1926" max-vertical-offset="4446">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeoUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/GeoUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1494">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -172,10 +172,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CameraActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="8" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.85057473" vertical-offset="1158" max-vertical-offset="3438">
+            <state line="92" column="8" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.0" vertical-offset="1158" max-vertical-offset="3438">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,12 +211,12 @@
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ImageAdapter.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_end.xml" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationService.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/EndActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java" />
       </list>
     </option>
   </component>
@@ -558,13 +558,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="55" selection-start="411" selection-end="411" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="33" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" vertical-offset="129" max-vertical-offset="1314">
@@ -640,31 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="17" selection-start="3318" selection-end="3318" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="5040">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="62" selection-start="628" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1224">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="5" selection-start="3457" selection-end="3687" vertical-scroll-proportion="0.0" vertical-offset="1464" max-vertical-offset="4392">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="5" selection-start="615" selection-end="720" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="882">
@@ -685,7 +653,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="8" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.85057473" vertical-offset="1158" max-vertical-offset="3438">
+        <state line="92" column="8" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.0" vertical-offset="1158" max-vertical-offset="3438">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="166" column="23" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.0" vertical-offset="1164" max-vertical-offset="5040">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/GeoUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="141" selection-end="141" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1494">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="43" selection-start="4392" selection-end="4392" vertical-scroll-proportion="-9.0" vertical-offset="1926" max-vertical-offset="4446">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="44" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.4827586" vertical-offset="378" max-vertical-offset="1242">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

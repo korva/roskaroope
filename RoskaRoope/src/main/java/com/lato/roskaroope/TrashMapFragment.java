@@ -164,7 +164,7 @@ public class TrashMapFragment extends SupportMapFragment {
         double distance = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), mTarget.location.latitude, mTarget.location.longitude)*1000;
         Log.d(TAG, "Distance to target trash can is " + distance + " m");
 
-        if(distance < 50) {
+        if(distance < 30) {
             mListener.onTargetReached(mTarget);
         } else {
             mListener.onTargetUpdated(mTarget, (int)distance);

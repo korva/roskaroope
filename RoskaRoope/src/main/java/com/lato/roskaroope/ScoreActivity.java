@@ -27,7 +27,8 @@ public class ScoreActivity extends Activity {
         Intent i = getIntent();
         long time = i.getLongExtra("time", 0);
         long timeScore = 0;
-        int distance = (int) i.getDoubleExtra("distance", 0)*1000;
+        double distanceDouble = i.getDoubleExtra("distance", 0)*1000;
+        int distance = (int) distanceDouble;
         int distanceScore = 0;
 
         if(time > 0) {

@@ -118,6 +118,8 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
             double distance = GeoUtils.distanceKm(mStartingLocation.getLatitude(), mStartingLocation.getLongitude(),
                     mTarget.location.latitude, mTarget.location.longitude);
 
+            Log.d(TAG, "SCORE DISTANCE: " + distance);
+
             Intent i = new Intent(this, ScoreActivity.class);
             i.putExtra("distance", distance);
             i.putExtra("time", time);
@@ -180,12 +182,13 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
     }
 
     public void onTargetCompleted(TrashMapFragment.TrashCan spot) {
-
+        mTarget = spot;
        onReturnButtonClicked(null);
     }
 
     public void onTargetReached(TrashMapFragment.TrashCan spot) {
 
+        mTarget = spot;
         Button button = (Button)findViewById(R.id.returnButton);
         button.setVisibility(View.VISIBLE);
     }
