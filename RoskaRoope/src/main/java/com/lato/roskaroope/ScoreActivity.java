@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.bugsense.trace.BugSenseHandler;
 
 /**
  * Created by jaakko on 6/6/13.
@@ -17,6 +18,7 @@ public class ScoreActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BugSenseHandler.initAndStartSession(this, "8dc145e2");
         setContentView(R.layout.activity_score);
 
         ImageView bg = (ImageView) findViewById(R.id.backgroundImage);

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.TextView;
+import com.bugsense.trace.BugSenseHandler;
 
 /**
  * Created by jaakko on 10/14/13.
@@ -16,6 +17,7 @@ public class EndActivity extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BugSenseHandler.initAndStartSession(this, "8dc145e2");
         setContentView(R.layout.activity_end);
 
         mAdapter = new ImageAdapter(this, CameraActivity.sharedThumbnails);
@@ -25,6 +27,11 @@ public class EndActivity extends Activity {
         TextView score = (TextView) findViewById(R.id.scoreText);
         score.setText("Peli päättyi!\n" +
                 "Sait yhteensä " + MainActivity.sharedTotalScore + " pistettä");
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        BugSenseHandler.closeSession(this);
     }
 
     public void onContinueButtonClicked(View v) {

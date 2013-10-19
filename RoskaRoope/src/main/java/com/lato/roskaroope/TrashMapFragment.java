@@ -86,7 +86,7 @@ public class TrashMapFragment extends SupportMapFragment {
                 TrashCan can = mMarkerObjectMap.get(marker);
                 if(can != null & mCurrentLocation != null) {
                     double dist = GeoUtils.distanceKm(mCurrentLocation.latitude, mCurrentLocation.longitude, can.location.latitude, can.location.longitude);
-                    if(dist*1000 < 400) {
+                    if(dist*1000 < 30) {
                         marker.setSnippet("Klikkaa ja palauta roskat!");
                     } else {
                         marker.setSnippet("Tämä roskis on liian kaukana...");

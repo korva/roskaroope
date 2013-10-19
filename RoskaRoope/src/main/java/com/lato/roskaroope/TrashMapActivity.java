@@ -20,6 +20,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.bugsense.trace.BugSenseHandler;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -52,6 +53,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BugSenseHandler.initAndStartSession(this, "8dc145e2");
 
         setContentView(R.layout.activity_map);
 
@@ -97,6 +99,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
         super.onDestroy();
         stopService(new Intent(this, LocationService.class));
         if (mConnection != null) unbindService(mConnection);
+        BugSenseHandler.closeSession(this);
 
     }
 

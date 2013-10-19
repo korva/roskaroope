@@ -15,6 +15,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import com.bugsense.trace.BugSenseHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,7 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        BugSenseHandler.initAndStartSession(this, "8dc145e2");
         setContentView(R.layout.activity_camera);
 
         // Create new preview, add it to layout and start viewfinder
@@ -89,7 +90,7 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
+        BugSenseHandler.closeSession(this);
     }
 
 

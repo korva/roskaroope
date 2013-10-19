@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
+import com.bugsense.trace.BugSenseHandler;
 
 public class MainActivity extends Activity {
 
@@ -15,9 +16,15 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        BugSenseHandler.initAndStartSession(this, "8dc145e2");
         setContentView(R.layout.activity_main);
 
 
+    }
+
+    protected void onDestroy() {
+        super.onDestroy();
+        BugSenseHandler.closeSession(this);
     }
 
 
