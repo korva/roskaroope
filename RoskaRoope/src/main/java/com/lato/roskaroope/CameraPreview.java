@@ -75,11 +75,13 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             //Log.d(TAG, "Size: " + size.height + " x " + size.width);
             if(size.height == 1200 && size.width == 1600) {
                 parameters.setPreviewSize(size.width, size.height);
-                //Log.d(TAG, "Selected this ^^");
+            }
+            else if(size.height == 1024 && size.width == 1280) {
+                parameters.setPreviewSize(size.width, size.height);
             }
         }
 
-        parameters.setJpegQuality(80);
+        parameters.setJpegQuality(70);
         parameters.setJpegThumbnailSize(0, 0);
 
         // set picture size

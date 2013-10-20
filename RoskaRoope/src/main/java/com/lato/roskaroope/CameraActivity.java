@@ -1,8 +1,10 @@
 package com.lato.roskaroope;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -10,6 +12,7 @@ import android.graphics.Matrix;
 import android.hardware.Camera;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -128,7 +131,7 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
 
     }
 
-    private class SaveImageTask extends AsyncTask<byte[], Void, Bitmap> {
+    private class SaveImageTask extends AsyncTask<byte[], Void, Boolean> {
 
         private ProgressDialog mProgressDialog;
         private Context mContext;
@@ -144,20 +147,24 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
         }
 
         @Override
-        protected void onPostExecute(Bitmap image) {
+        protected void onPostExecute(Boolean success) {
 
 
-            if(image != null) {
-                sharedCameraImage = image;
-
-
+            if(success) {
 
                 Intent intent = new Intent(CameraActivity.this, TrashMapActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 
             } else {
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(CameraActivity.this);
+                builder.setMessage("Kuvan ottamisessa tapahtui virhe.")
+                        .setCancelable(true)
+                        .setPositiveButton("Perhana", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        }).show();
             }
 
             mProgressDialog.dismiss();
@@ -165,23 +172,31 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
 
 
         @Override
-        protected Bitmap doInBackground(byte[]... params) {
+        protected Boolean doInBackground(byte[]... params) {
 
             // rotate and resize the picture
             byte[] data = params[0];
+            Log.d(TAG, "Image bytes length: " + data.length);
             Bitmap sourceBitmap;
             sourceBitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
 
             Matrix matrix = new Matrix();
             matrix.postRotate(90);
-            Bitmap rotatedBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight(), matrix, true);
+            Bitmap rotatedBitmap = null;
+            try {
+                rotatedBitmap = Bitmap.createBitmap(sourceBitmap, 0, 0, sourceBitmap.getWidth(), sourceBitmap.getHeight(), matrix, true);
+            } catch (OutOfMemoryError oom) {
+                return false;
+            }
+            sourceBitmap.recycle();
+            sharedCameraImage = rotatedBitmap;
             Log.d(TAG, "Got bitmap from camera. w: " + rotatedBitmap.getWidth() + " h: " + rotatedBitmap.getHeight());
 
             // Create thumbnail
             Bitmap thumb = Bitmap.createScaledBitmap(rotatedBitmap, 250, 400, false);
             sharedThumbnails.add(thumb);
 
-            return rotatedBitmap;
+            return true;
 
         }
     }
