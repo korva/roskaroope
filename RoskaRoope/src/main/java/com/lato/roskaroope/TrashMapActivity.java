@@ -97,7 +97,6 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     protected void onDestroy() {
         super.onDestroy();
-        stopService(new Intent(this, LocationService.class));
         if (mConnection != null) unbindService(mConnection);
         BugSenseHandler.closeSession(this);
 
@@ -160,6 +159,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
             // If location happens to be available immediately, update things accordingly
             if (mLocationService.locationAvailable()) {
+                mCurrentLocation = mLocationService.getLocation();
                 if(mMapFragment != null) mMapFragment.updateCurrentLocation(mLocationService.getLocation());
             }
 

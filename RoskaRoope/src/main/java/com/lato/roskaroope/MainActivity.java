@@ -19,11 +19,15 @@ public class MainActivity extends Activity {
         BugSenseHandler.initAndStartSession(this, "8dc145e2");
         setContentView(R.layout.activity_main);
 
+        // start location service
+        this.startService(new Intent(this, LocationService.class));
+
 
     }
 
     protected void onDestroy() {
         super.onDestroy();
+        stopService(new Intent(this, LocationService.class));
         BugSenseHandler.closeSession(this);
     }
 

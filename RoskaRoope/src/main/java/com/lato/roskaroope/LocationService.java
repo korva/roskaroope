@@ -40,7 +40,7 @@ public class LocationService extends Service {
 	@Override
     public void onCreate() {
           super.onCreate();
-
+          Log.e(TAG, "Location service created");
           initializeLocationManager();
           try {
               mLocationManager.requestLocationUpdates(
@@ -71,7 +71,7 @@ public class LocationService extends Service {
     public void onDestroy() {
           super.onDestroy();
           //Toast.makeText(this, "Service destroyed ...", Toast.LENGTH_LONG).show();
-          //Log.e(TAG, "onDestroy");
+          Log.e(TAG, "Location service destroiyed");
           if (mLocationManager != null) {
               for (int i = 0; i < mLocationListeners.length; i++) {
                   try {
