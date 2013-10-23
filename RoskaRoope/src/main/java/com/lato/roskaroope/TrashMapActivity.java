@@ -31,8 +31,8 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     private static final String TAG = "TrashMapActivity";
 
-    com.lato.roskaroope.LocationService mLocationService = null;
-    LocationServiceListener mLocationServiceListener = null;
+    private com.lato.roskaroope.LocationService mLocationService = null;
+    private LocationServiceListener mLocationServiceListener = null;
     private static final int mLocationAccuracyTreshold = 5000;
     private long mStartTime = 0;
 
@@ -175,11 +175,6 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
             Log.d(TAG, "Location service disconnected");
         }
     };
-
-    public interface LocationServiceListener
-    {
-        public void onLocationAvailable(Location location);
-    }
 
     public void onTargetCompleted(TrashMapFragment.TrashCan spot) {
         mTarget = spot;

@@ -7,31 +7,50 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
-    android:background="@android:color/background_dark">
+    android:background="@drawable/bg">
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Roska-Roope -pelissä keräät mainetta ja kunnia löytämällä lähistöltäsi roskia ja viemällä ne mahdollisimman nopeasti roskikseen!\n\nOta kuva roskasta, jonka jälkeen sinulle näytetään lähin roskis. Loppu on itsestäsi kiinni!\n\nPeli toimii tällä hetkellä Tampereen alueella."
+            android:text="Roska-Roope -pelissä keräät mainetta ja kunniaa löytämällä lähistöltäsi roskia ja viemällä ne mahdollisimman nopeasti roskikseen.\n\nOta kuva roskasta, jonka jälkeen sinulle näytetään lähin roskis. Loppu on itsestäsi kiinni!\n\nTämä pelin testiversio toimii Tampereen alueella."
             android:id="@+id/instructionText"
             android:width="300dp"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="4dp"
+            android:padding="10dp"
+        android:fontFamily="sans-serif-condensed"
+            android:background="#AA000000"/>
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pelaa!"
+            android:text="Haetaan sijaintiasi..."
             android:id="@+id/button"
+            android:enabled="false"
             android:onClick="onPlayButtonClicked"
-            android:width="200dp"
+            android:width="300dp"
             android:textColor="#FFFFFF"
             android:layout_below="@id/instructionText"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="28dp"/>
+            android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peli voi alkaa jahka sijaintisi on löytynyt..."
+        android:id="@+id/locationText"
+        android:width="300dp"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button"
+        android:layout_marginTop="6dp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:fontFamily="sans-serif-condensed"/>
 
 
 </RelativeLayout>

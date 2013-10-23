@@ -24,7 +24,7 @@ public class LocationService extends Service {
 	
 	private final IBinder mBinder = new LocalBinder();
 	
-	ArrayList<TrashMapActivity.LocationServiceListener> mListeners = new ArrayList<TrashMapActivity.LocationServiceListener> ();
+	ArrayList<LocationServiceListener> mListeners = new ArrayList<LocationServiceListener> ();
 	
 	@Override
 	public IBinder onBind(Intent intent) {
@@ -84,7 +84,7 @@ public class LocationService extends Service {
 
     }
     
-    public void setOnLocationServiceListener (TrashMapActivity.LocationServiceListener listener)
+    public void setOnLocationServiceListener (LocationServiceListener listener)
     {
         //Log.d(TAG, "Adding listener");
     	// Store the listener object
@@ -133,7 +133,7 @@ public class LocationService extends Service {
         	mLastLocation.set(location);
         	mLocationAvailable = true;
             
-            for (TrashMapActivity.LocationServiceListener listener : mListeners)
+            for (LocationServiceListener listener : mListeners)
             {
                 listener.onLocationAvailable(location);
             }
