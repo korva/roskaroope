@@ -62,7 +62,8 @@
 
         <meta-data
                 android:name="com.google.android.maps.v2.API_KEY"
-                android:value="AIzaSyBQxpjm2IbJlBy4RuTQWlSDDBeiRuub1z8" />
+                android:value="AIzaSyDJlO_ExJ5JuvH2BvKk_WQGu4jcTVfWgNo" />
+                <!--android:value="AIzaSyBQxpjm2IbJlBy4RuTQWlSDDBeiRuub1z8" /> debug key-->
     </application>
 
 </manifest>
