@@ -115,15 +115,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationServiceListener.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationServiceListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="55" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="288">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer">
@@ -141,25 +132,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TrashMapFragment.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TrashMapFragment.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="52" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-8.035714" vertical-offset="189" max-vertical-offset="5832">
+            <state line="44" column="42" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-0.74358976" vertical-offset="567" max-vertical-offset="5832">
               <folding>
                 <element signature="e#2751#3975#0" expanded="true" />
                 <element signature="e#3964#3965#0" expanded="true" />
                 <element signature="e#4074#5147#0" expanded="true" />
                 <element signature="e#5136#5137#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="35" selection-start="3033" selection-end="3033" vertical-scroll-proportion="0.0" vertical-offset="1674" max-vertical-offset="3060">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,31 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_map.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="34" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.46556473" vertical-offset="317" max-vertical-offset="1116">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CameraActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="13" selection-start="5264" selection-end="5264" vertical-scroll-proportion="0.0" vertical-offset="3006" max-vertical-offset="3762">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraPreview.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="1476" max-vertical-offset="2466">
+            <state line="184" column="13" selection-start="5762" selection-end="5762" vertical-scroll-proportion="0.0" vertical-offset="2751" max-vertical-offset="3366">
               <folding />
             </state>
           </provider>
@@ -221,19 +182,19 @@
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/EndActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationServiceListener.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/LocationService.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/MainActivity.java" />
-        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
         <option value="$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java" />
+        <option value="$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1665" />
+    <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1536" />
     <option name="height" value="905" />
@@ -576,13 +537,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1665" y="-4" width="1536" height="905" extended-state="6" />
+    <frame x="65" y="-4" width="1536" height="905" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1707953" sideWeight="0.54241645" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1707953" sideWeight="0.54241645" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -668,20 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="2340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="13" selection-start="5264" selection-end="5264" vertical-scroll-proportion="0.0" vertical-offset="2744" max-vertical-offset="3672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/ScoreActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="44" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1242">
@@ -725,6 +672,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="34" selection-start="1118" selection-end="1118" vertical-scroll-proportion="-5.827586" vertical-offset="317" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="203" column="25" selection-start="7440" selection-end="7440" vertical-scroll-proportion="0.0" vertical-offset="2969" max-vertical-offset="4122">
@@ -732,25 +689,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraPreview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="0" selection-start="2316" selection-end="2316" vertical-scroll-proportion="-0.32142857" vertical-offset="1476" max-vertical-offset="2340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/CameraActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="13" selection-start="5762" selection-end="5762" vertical-scroll-proportion="0.0" vertical-offset="2751" max-vertical-offset="3366">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/java/com/lato/roskaroope/TrashMapFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="52" selection-start="1772" selection-end="1772" vertical-scroll-proportion="-8.035714" vertical-offset="189" max-vertical-offset="5832">
+        <state line="44" column="42" selection-start="1529" selection-end="1529" vertical-scroll-proportion="-0.74358976" vertical-offset="567" max-vertical-offset="5832">
           <folding>
             <element signature="e#2751#3975#0" expanded="true" />
             <element signature="e#3964#3965#0" expanded="true" />
             <element signature="e#4074#5147#0" expanded="true" />
             <element signature="e#5136#5137#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RoskaRoope/src/main/res/layout/activity_map.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="34" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.46556473" vertical-offset="317" max-vertical-offset="1116">
-          <folding />
         </state>
       </provider>
     </entry>

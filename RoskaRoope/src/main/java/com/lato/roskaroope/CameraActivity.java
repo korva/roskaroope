@@ -178,7 +178,11 @@ public class CameraActivity extends Activity implements Camera.AutoFocusCallback
             byte[] data = params[0];
             Log.d(TAG, "Image bytes length: " + data.length);
             Bitmap sourceBitmap;
-            sourceBitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+            try {
+              sourceBitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+            } catch (OutOfMemoryError oom) {
+                return false;
+            }
 
             Matrix matrix = new Matrix();
             matrix.postRotate(90);
