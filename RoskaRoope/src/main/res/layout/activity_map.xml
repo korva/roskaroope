@@ -25,20 +25,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:width="200dp"
+                android:height="80dp"
                 android:text="Roskat pönttöön!"
                 android:id="@+id/returnButton"
                 android:onClick="onReturnButtonClicked"/>
 
-        <!--       <Button
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1"
-                       android:layout_marginBottom="13dp"
-                       android:layout_alignParentBottom="true"
-                       android:layout_alignParentLeft="true"
-                       android:layout_marginLeft="6dp"
-                       android:text=">>"
-                       android:onClick="onCheatButtonClicked"/>-->
         <com.lato.roskaroope.CompassView
                 android:id="@+id/compass"
                 android:layout_height="60dp"
@@ -55,9 +46,9 @@
                 android:id="@+id/nearestText"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:width="200dp"
-                android:background="#FF6A00"
-                android:padding="6dp"
+                android:layout_marginTop="10dp"
+                android:background="#E2E2E2"
+                android:padding="10dp"
                 android:text="Haetaan sijaintiasi..." />
 
     </RelativeLayout>
