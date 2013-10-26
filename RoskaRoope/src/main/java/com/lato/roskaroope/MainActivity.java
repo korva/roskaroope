@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.location.Location;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.IBinder;
@@ -16,6 +17,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.bugsense.trace.BugSenseHandler;
 
@@ -24,7 +26,7 @@ public class MainActivity extends Activity {
     public static long sharedTotalScore = 0;
     private com.lato.roskaroope.LocationService mLocationService = null;
     private LocationServiceListener mLocationServiceListener = null;
-    private static final int mLocationAccuracyTreshold = 5000;
+    private static final int mLocationAccuracyTreshold = 100;
     private static final String TAG = "MainActivity";
 
     @Override
@@ -46,6 +48,9 @@ public class MainActivity extends Activity {
                 Button button = (Button)findViewById(R.id.button);
                 button.setText("Pelaa!");
                 button.setEnabled(true);
+
+                TextView text = (TextView)findViewById(R.id.locationText);
+                text.setVisibility(View.GONE);
 
             }
         };
@@ -110,6 +115,9 @@ public class MainActivity extends Activity {
                 Button button = (Button)findViewById(R.id.button);
                 button.setText("Pelaa!");
                 button.setEnabled(true);
+
+                TextView text = (TextView)findViewById(R.id.locationText);
+                text.setVisibility(View.GONE);
             }
 
 

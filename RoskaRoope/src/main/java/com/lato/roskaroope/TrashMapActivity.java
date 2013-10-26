@@ -33,7 +33,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
 
     private com.lato.roskaroope.LocationService mLocationService = null;
     private LocationServiceListener mLocationServiceListener = null;
-    private static final int mLocationAccuracyTreshold = 5000;
+    private static final int mLocationAccuracyTreshold = 100;
     private long mStartTime = 0;
 
     // User's last known location
@@ -160,6 +160,7 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
             // If location happens to be available immediately, update things accordingly
             if (mLocationService.locationAvailable()) {
                 mCurrentLocation = mLocationService.getLocation();
+                mStartingLocation = mCurrentLocation;
                 if(mMapFragment != null) mMapFragment.updateCurrentLocation(mLocationService.getLocation());
             }
 
@@ -188,16 +189,23 @@ public class TrashMapActivity extends FragmentActivity implements TrashMapFragme
         button.setVisibility(View.VISIBLE);
     }
 
+    public void onTargetLost(TrashMapFragment.TrashCan spot) {
+
+        mTarget = spot;
+        Button button = (Button)findViewById(R.id.returnButton);
+        button.setVisibility(View.GONE);
+    }
+
     public void onTargetUpdated(TrashMapFragment.TrashCan spot, double distance) {
         // update game UI
         TextView text = (TextView)findViewById(R.id.nearestText);
 
         int dist = (int)distance;
         if(dist < 1000) {
-            text.setText("Lähin roskis " + dist + " m päässä");
+            text.setText("Roskis " + dist + " m päässä");
         }
         else {
-            text.setText("Lähin roskis " + dist/1000 + " km " + dist%1000 + " m päässä");
+            text.setText("Roskis " + dist/1000 + " km " + dist%1000 + " m päässä");
         }
 
         if(spot == null) return;

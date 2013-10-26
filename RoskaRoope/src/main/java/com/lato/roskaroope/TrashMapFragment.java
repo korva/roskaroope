@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -26,6 +27,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by jaakko on 6/9/13.
@@ -39,6 +41,8 @@ public class TrashMapFragment extends SupportMapFragment {
     private HashMap<Marker, TrashCan> mMarkerObjectMap = new HashMap<Marker, TrashCan>();
     private ArrayList<TrashCan> mSpotList = new ArrayList<TrashCan>();
     private LatLng mCurrentLocation = null;
+    // How close to a trash can you need to be to allow return (in m)
+    private int mReturnAllowedTreshold = 30;
 
     // Used to communicate spot selection events back to containing activity
     MapEventListener mListener;
@@ -82,17 +86,27 @@ public class TrashMapFragment extends SupportMapFragment {
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                // check if we are close enough
                 TrashCan can = mMarkerObjectMap.get(marker);
-                if(can != null & mCurrentLocation != null) {
-                    double dist = GeoUtils.distanceKm(mCurrentLocation.latitude, mCurrentLocation.longitude, can.location.latitude, can.location.longitude);
-                    if(dist*1000 < 30) {
-                        marker.setSnippet("Klikkaa ja palauta roskat!");
-                    } else {
-                        marker.setSnippet("Tämä roskis on liian kaukana...");
+                if (can == null || mCurrentLocation == null) return true;
+                double dist = GeoUtils.distanceKm(mCurrentLocation.latitude, mCurrentLocation.longitude, can.location.latitude, can.location.longitude)*1000;
+
+                // if target has been selected already
+                if(mTarget != null) {
+                    if(can.name == mTarget.name) {
+                        if(dist < mReturnAllowedTreshold) {
+                            marker.setSnippet("Voi palauttaa roskat!");
+                        } else {
+                            marker.setSnippet("Tämä roskis on vielä liian kaukana...");
+                        }
+                        mListener.onTargetUpdated(can, dist*1000);
                     }
-                    mListener.onTargetUpdated(can, dist*1000);
+                    else {
+                        marker.setSnippet("Klikkaa valitaksesi tämä roskis");
+                    }
+                } else {
+                    marker.setSnippet("Klikkaa valitaksesi tämä roskis");
                 }
+
                 return false;
             }
         });
@@ -103,9 +117,23 @@ public class TrashMapFragment extends SupportMapFragment {
             @Override
             public void onInfoWindowClick(Marker marker) {
                 TrashCan can = mMarkerObjectMap.get(marker);
-                if(can != null) {
-                    mListener.onTargetCompleted(can);
+                if(can == null || mCurrentLocation == null) return;
+
+                if(mTarget != null)
+                {
+                    Marker targetMarker = getMarkerForCan(mTarget);
+                    if(targetMarker != null) targetMarker.setIcon(BitmapDescriptorFactory.defaultMarker());
                 }
+
+                mTarget = can;
+                double dist = GeoUtils.distanceKm(mCurrentLocation.latitude, mCurrentLocation.longitude, mTarget.location.latitude, mTarget.location.longitude)*1000;
+                mListener.onTargetUpdated(can, dist);
+                if(dist < mReturnAllowedTreshold) {
+                    mListener.onTargetReached(mTarget);
+                } else {
+                    mListener.onTargetLost(mTarget);
+                }
+                marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.target));
 
             }
         });
@@ -135,6 +163,18 @@ public class TrashMapFragment extends SupportMapFragment {
         return;
     }
 
+    private Marker getMarkerForCan(TrashCan target) {
+        // set marker color to indicate selection
+        for (Map.Entry<Marker, TrashCan> e : mMarkerObjectMap.entrySet()) {
+            Marker marker = e.getKey();
+            TrashCan can = e.getValue();
+            if(can.name == target.name) {
+                return marker;
+            }
+        }
+        return null;
+    }
+
     public void updateCurrentLocation(Location location) {
 
         Log.d(TAG, "TrashMapFragment updateCurrentLocation");
@@ -156,17 +196,22 @@ public class TrashMapFragment extends SupportMapFragment {
 
             if(mTarget == null) return;
 
-            Log.d(TAG, "Nearest trash can was " + mTarget.name + ", " + nearest*1000 + " m away.");
+            Marker marker = getMarkerForCan(mTarget);
+            if(marker != null) marker.setIcon(BitmapDescriptorFactory.fromResource(R.drawable.target));
 
-            if(mMap != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 15));
+            Log.d(TAG, "Nearest trash can was " + mTarget.name + ", " + nearest * 1000 + " m away.");
+
+            if(mMap != null) mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mTarget.location, 17));
 
         }
         double distance = GeoUtils.distanceKm(location.getLatitude(), location.getLongitude(), mTarget.location.latitude, mTarget.location.longitude)*1000;
         Log.d(TAG, "Distance to target trash can is " + distance + " m");
 
         mListener.onTargetUpdated(mTarget, (int)distance);
-        if(distance < 30) {
+        if(distance < mReturnAllowedTreshold) {
             mListener.onTargetReached(mTarget);
+        } else {
+            mListener.onTargetLost(mTarget);
         }
 
     }
@@ -201,7 +246,6 @@ public class TrashMapFragment extends SupportMapFragment {
             mark = mMap.addMarker(new MarkerOptions()
                     .position(items.get(i).location)
                     .title(items.get(i).name));
-                    //.icon(BitmapDescriptorFactory.fromResource(R.drawable.playground_favorite)));
 
             mMarkerObjectMap.put(mark, items.get(i));
 
@@ -218,6 +262,7 @@ public class TrashMapFragment extends SupportMapFragment {
     public interface MapEventListener {
         public void onTargetUpdated(TrashCan spot, double distance);
         public void onTargetReached(TrashCan spot);
+        public void onTargetLost(TrashCan spot);
         public void onTargetCompleted(TrashCan spot);
     }
 

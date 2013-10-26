@@ -38,10 +38,10 @@
             android:layout_marginTop="6dp"/>
 
     <TextView
+        android:id="@+id/locationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Peli voi alkaa jahka sijaintisi on löytynyt..."
-        android:id="@+id/locationText"
         android:width="300dp"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
