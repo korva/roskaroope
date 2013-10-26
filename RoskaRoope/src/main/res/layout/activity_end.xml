@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/background_dark">
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="90dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#BB615C5E"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="12dp">
+
+        <TextView android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:width="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="28dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:text="Palautit roskan 200m päästä ajassa 00:12 saaden 145 pistettä!"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Palaa alkuvalikkoon"
+            android:id="@+id/button2"
+            android:width="200dp"
+            android:textColor="#FFFFFF"
+            android:layout_centerVertical="true"
+            android:onClick="onContinueButtonClicked"
+            android:layout_alignLeft="@id/scoreText"
+            android:layout_below="@id/scoreText"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

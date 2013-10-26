@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:tileMode="repeat" >
+
+    <fragment
+            android:id="@+id/map"
+            class="com.lato.roskaroope.TrashMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:layout="@layout/activity_map"/>
+
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:width="200dp"
+                android:height="80dp"
+                android:text="Roskat pönttöön!"
+                android:id="@+id/returnButton"
+                android:onClick="onReturnButtonClicked"/>
+
+        <com.lato.roskaroope.CompassView
+                android:id="@+id/compass"
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/nearestText"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:background="#E2E2E2"
+                android:padding="10dp"
+                android:text="Haetaan sijaintiasi..." />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

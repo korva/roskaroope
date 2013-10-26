@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Roska-Roope</string>
+    <string name="action_settings">Roska-Roope</string>
+    <string name="title_activity_main">Roska-Roope</string>
+    <string name="title_activity_map">Vie roska roskikseen</string>
+    <string name="title_activity_camera">Kuvaa ja poimi roska</string>
+    <string name="title_activity_score">Roska siivottu!</string>
+    <string name="splash_loading">Please wait...</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="map">Map</string>
+    <string name="search">Search</string>
+    <string name="nearest">Nearest</string>
+    <string name="share">Share</string>
+    <string name="sendFeedback">Send feedback</string>
+    <string name="about">About</string>
+    <string name="Nes">Kyllä</string>
+    <string name="locationSettingsDialog">Roska-roope tarvitsee sijaintitietoja...laitathan ne päälle asetuksista!</string>
+    <string name="No">Ei</string>
+
+</resources>
